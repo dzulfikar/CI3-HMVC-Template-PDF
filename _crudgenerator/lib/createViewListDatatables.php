@@ -3,6 +3,12 @@ Author : Hari Prasetyo
 Website : harviacode.com
 Create Date : 08/05/2015
 
+HMVC Modified By
+====================
+Author : Raessa Fathul Alim
+Website : http://mahasiswapoltek.org
+Create Date : 22/06/2015
+
 You may edit this code, but please do not remove original information. Thanks :D
 -->
 <?php
