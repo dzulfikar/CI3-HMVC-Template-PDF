@@ -63,7 +63,7 @@ $string .= "\n\n    public function index()
             'start' => \$start,
         );
 
-        \$this->load->view('$list', \$data);
+        \$this->template->load('templates/editthistemplate','$list', \$data);
     }
     
     public function search() 
@@ -94,7 +94,7 @@ $string .= "\n\n    public function index()
             'total_rows' => \$config['total_rows'],
             'start' => \$start,
         );
-        \$this->load->view('$list', \$data);
+        \$this->template->load('templates/editthistemplate','$list', \$data);
     }";
 
 } else {
@@ -107,7 +107,7 @@ $string .="\n\n    public function index()
             '" . $controller . "_data' => \$$controller
         );
 
-        \$this->load->view('$list', \$data);
+        \$this->template->load('templates/editthistemplate','$list', \$data);
     }";
 
 }
@@ -127,7 +127,7 @@ if (mysql_num_rows($result2) > 0)
 }
 
 $string .= "\n\t    );
-            \$this->load->view('$read', \$data);
+            \$this->template->load('templates/editthistemplate','$read', \$data);
         } else {
             \$this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('$controller'));
@@ -148,7 +148,8 @@ if (mysql_num_rows($result2) > 0)
     }
 }
 $string .= "\n\t);
-        \$this->load->view('$form', \$data);
+        \$this->template->load('templates/editthistemplate','$form', \$data);
+
     }
     
     public function create_action() 
@@ -192,7 +193,7 @@ if (mysql_num_rows($result2) > 0)
     }
 }
 $string .= "\n\t    );
-            \$this->load->view('$form', \$data);
+            \$this->template->load('templates/editthistemplate','$form', \$data);
         } else {
             \$this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('$controller'));

@@ -36,7 +36,7 @@ class Biodata extends CI_Controller
             'start' => $start,
         );
 
-        $this->load->view('biodata_list', $data);
+        $this->template->load('templates/editthistemplate','biodata_list', $data);
     }
     
     public function search() 
@@ -67,7 +67,7 @@ class Biodata extends CI_Controller
             'total_rows' => $config['total_rows'],
             'start' => $start,
         );
-        $this->load->view('biodata_list', $data);
+        $this->template->load('templates/editthistemplate','biodata_list', $data);
     }
 
     public function read($id) 
@@ -79,7 +79,7 @@ class Biodata extends CI_Controller
 		'nama' => $row->nama,
 		'alamat' => $row->alamat,
 	    );
-            $this->load->view('biodata_read', $data);
+            $this->template->load('templates/editthistemplate','biodata_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biodata'));
@@ -95,7 +95,8 @@ class Biodata extends CI_Controller
 	    'nama' => set_value('nama'),
 	    'alamat' => set_value('alamat'),
 	);
-        $this->load->view('biodata_form', $data);
+        $this->template->load('templates/editthistemplate','biodata_form', $data);
+
     }
     
     public function create_action() 
@@ -128,7 +129,7 @@ class Biodata extends CI_Controller
 		'nama' => set_value('nama', $row->nama),
 		'alamat' => set_value('alamat', $row->alamat),
 	    );
-            $this->load->view('biodata_form', $data);
+            $this->template->load('templates/editthistemplate','biodata_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biodata'));

@@ -184,11 +184,11 @@ if (isset($_POST['table'])) {
                     <li>Write your table name, choose codeigniter version and push generate button.</li>
                     <li>That steps will generate this following files :
                         <ul>
-                            <li>../application/models/tablename_model.php</li>
-                            <li>../application/controllers/tablename.php</li>
-                            <li>../application/views/tablename_list.php</li>
-                            <li>../application/views/tablename_form.php</li>
-                            <li>../application/views/tablename_read.php</li>
+                            <li>../application/modules/models/tablename_model.php</li>
+                            <li>../application/modules/controllers/tablename.php</li>
+                            <li>../application/modules/views/tablename_list.php</li>
+                            <li>../application/modules/views/tablename_form.php</li>
+                            <li>../application/modules/views/tablename_read.php</li>
                             <li>../application/config/pagination.php</li>
                         </ul>
                     </li>
@@ -210,7 +210,7 @@ if (isset($_POST['table'])) {
                     </li>
                 </ul>
 
-                <p><strong>&COPY; 2015 <a target="_blank" href="http://harviacode.com">harviacode.com</a></strong></p>
+                <p><strong>&COPY; 2015 <a target="_blank" href="http://harviacode.com">harviacode.com</a> Intgrated With Templating and Codeigniter 3 by Raessa Fathul Alim</strong></p>
             </div>
         </div>
         <script type="text/javascript">
